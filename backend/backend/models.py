@@ -7,12 +7,11 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
-
 class Food(models.Model):
-    fdc_id = models.AutoField(primary_key=True)
+    fdc_id = models.IntegerField(primary_key=True)
     data_type = models.CharField(max_length=50, blank=True, null=True)
     description = models.CharField(max_length=300, blank=True, null=True)
-    food_category_id = models.AutoField()
+    food_category_id = models.IntegerField()
     publication_date = models.DateField(blank=True, null=True)
 
     class Meta:
