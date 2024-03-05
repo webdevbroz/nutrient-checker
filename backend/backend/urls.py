@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from . import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/nutrients', views.get_nutrients, name="status"),
+    path('api/randomItem', views.get_random_item, name="randomItem"),
 ]
